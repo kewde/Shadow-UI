@@ -1783,6 +1783,8 @@ function appendContact (key, openconvo, addressbook) {
         if(contact.messages !== undefined && !addressbook)
             $("#" + elementName + key + " .contact-info .contact-message").text(contact.messages[contact.messages.length-1].message);
 
+    prependContact(key);
+
     if(openconvo) { //|| contact_el.hasClass("selected")
         openConversation(key, false);
     }
